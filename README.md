@@ -3,8 +3,10 @@
 # FlowLayout
 Android流式布局，支持单选、多选等，适合用于产品标签等。
 
+## 新增
+* 支持设置显示的行数
 
-##特色
+## 特色
 * 以setAdapter形式注入数据
 * 直接设置selector为background即可完成标签选则的切换，类似CheckBox
 * 支持控制选择的Tag数量，比如：单选、多选
@@ -13,7 +15,7 @@ Android流式布局，支持单选、多选等，适合用于产品标签等。
 * 支持adapter.notifyDataChanged
 * Activity重建（或者旋转）后，选择的状态自动保存
 
-##效果图
+## 效果图
 
 <img src="flowlayout_03.gif" width="320px"/>
 
@@ -23,7 +25,7 @@ Android流式布局，支持单选、多选等，适合用于产品标签等。
 
 ```java
 dependencies {
- compile 'com.hyman:flowlayout-lib:1.1.2'
+    compile 'com.github.djzhao627:flowlayout-lib:1.0'
 }
 ```
 
@@ -32,12 +34,12 @@ dependencies {
 
 ```java
  <com.zhy.view.flowlayout.TagFlowLayout
-        android:id="@+id/id_flowlayout"
-        zhy:max_select="-1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
-    </com.zhy.view.flowlayout.TagFlowLayout>
+    android:id="@+id/id_flowlayout"
+    zhy:max_select="-1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+</com.zhy.view.flowlayout.TagFlowLayout>
 ```
 
 支持属性：
@@ -47,7 +49,7 @@ dependencies {
 支持通过state=checked来控制选中和取消,也可以自己在Adapter
 的onSelected和unSelected中分别处理显示。
 
-###设置数据
+### 设置数据
 
 ```java
 mFlowLayout.setAdapter(new TagAdapter<String>(mVals)
@@ -55,8 +57,7 @@ mFlowLayout.setAdapter(new TagAdapter<String>(mVals)
        @Override
        public View getView(FlowLayout parent, int position, String s)
        {
-           TextView tv = (TextView) mInflater.inflate(R.layout.tv,
-                   mFlowLayout, false);
+           TextView tv = (TextView) mInflater.inflate(R.layout.tv, mFlowLayout, false);
            tv.setText(s);
            return tv;
        }
@@ -98,17 +99,17 @@ public void unSelected(int position, View view) {
 ```
 
 
-###事件
+### 事件
 
 ```java
 mFlowLayout.setOnTagClickListener(new TagFlowLayout.OnTagClickListener()
 {
-  @Override
-  public boolean onTagClick(View view, int position, FlowLayout parent)
-  {
-      Toast.makeText(getActivity(), mVals[position], Toast.LENGTH_SHORT).show();
-      return true;
-  }
+    @Override
+    public boolean onTagClick(View view, int position, FlowLayout parent)
+    {
+        Toast.makeText(getActivity(), mVals[position], Toast.LENGTH_SHORT).show();
+        return true;
+    }
 });
 ```
 
@@ -117,16 +118,16 @@ mFlowLayout.setOnTagClickListener(new TagFlowLayout.OnTagClickListener()
 ```java
 mFlowLayout.setOnSelectListener(new TagFlowLayout.OnSelectListener()
 {
-  @Override
-  public void onSelected(Set<Integer> selectPosSet)
-  {
-      getActivity().setTitle("choose:" + selectPosSet.toString());
-  }
+    @Override
+    public void onSelected(Set<Integer> selectPosSet)
+    {
+        getActivity().setTitle("choose:" + selectPosSet.toString());
+    }
 });
 ```
 选择多个标签时的回调。
 
-##预先设置Item选中
+## 预先设置Item选中
 
 ```java
 //预先设置选中
