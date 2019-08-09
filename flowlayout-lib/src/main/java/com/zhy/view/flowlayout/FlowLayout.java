@@ -19,15 +19,34 @@ public class FlowLayout extends ViewGroup {
     protected static final int CENTER = 0;
     protected static final int RIGHT = 1;
 
-    protected List<List<View>> mAllViews = new ArrayList<List<View>>();//记录所有行
-    protected List<Integer> mLineHeight = new ArrayList<Integer>();//记录所有行高
-    protected List<Integer> mLineWidth = new ArrayList<Integer>();//记录所有行宽
-    protected List<View> lineViews = new ArrayList<>();//临时记录每行的view
+    // 记录所有行
+    protected List<List<View>> mAllViews = new ArrayList<List<View>>();
+    // 记录所有行高
+    protected List<Integer> mLineHeight = new ArrayList<Integer>();
+    // 记录所有行宽
+    protected List<Integer> mLineWidth = new ArrayList<Integer>();
+    // 临时记录每行的view
+    protected List<View> lineViews = new ArrayList<>();
     protected int mGravity;
-    private int maxLine = -1;//最大行数
+    // 最大行数
+    private int maxLine = -1;
 
+    /**
+     * 设置最大行数
+     *
+     * @param maxLine 最大行数
+     */
     public void setMaxLine(int maxLine) {
         this.maxLine = maxLine;
+    }
+
+    /**
+     * 获取当前总行数
+     *
+     * @return
+     */
+    public int getTotalLines() {
+        return mAllViews.size();
     }
 
     public FlowLayout(Context context, AttributeSet attrs, int defStyle) {
@@ -91,12 +110,14 @@ public class FlowLayout extends ViewGroup {
             int childHeight = child.getMeasuredHeight() + lp.topMargin + lp.bottomMargin;
 
             if (lineWidth + childWidth > sizeWidth - getPaddingLeft() - getPaddingRight()) {
-                if (maxLine > 0 && mAllViews.size() + 1 >= maxLine) { //+1是因为后面还有最后一行
-                    break;//超过最大行数跳出循环
+                // +1是因为后面还有最后一行
+                if (maxLine > 0 && mAllViews.size() + 1 >= maxLine) {
+                    // 超过最大行数跳出循环
+                    break;
                 }
-                //需要换行
-                width = Math.max(width, lineWidth);//记录最大行宽
-                height += lineHeight;//累加包裹内容所需的高度
+                // 需要换行
+                width = Math.max(width, lineWidth);// 记录最大行宽
+                height += lineHeight;// 累加包裹内容所需的高度
 
                 //换行,保存上一行数据
                 mLineHeight.add(lineHeight);
@@ -190,7 +211,6 @@ public class FlowLayout extends ViewGroup {
             //更新下一个view添加到下一行的top
             top += lineHeight;
         }
-
     }
 
     @Override

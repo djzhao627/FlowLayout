@@ -1,10 +1,11 @@
 [![Android Gems](http://www.android-gems.com/badge/hongyangAndroid/FlowLayout.svg?branch=master)](http://www.android-gems.com/lib/hongyangAndroid/FlowLayout)
 
 # FlowLayout
-Android流式布局，支持单选、多选等，适合用于产品标签等。
+Android流式布局，支持单选、多选、设置显示行数等，适合用于产品标签等。
 
 ## 新增
 * 支持设置显示的行数
+* 获取总行数
 
 ## 特色
 * 以setAdapter形式注入数据
@@ -25,7 +26,7 @@ Android流式布局，支持单选、多选等，适合用于产品标签等。
 
 ```java
 dependencies {
-    compile 'com.github.djzhao627:flowlayout-lib:1.0'
+    compile 'com.github.djzhao627:FlowLayout:1.0'
 }
 ```
 

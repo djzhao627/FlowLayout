@@ -1,5 +1,6 @@
 package com.zhy.flowlayout;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -24,9 +25,12 @@ public class SimpleFragment extends Fragment {
 
     private TagFlowLayout mFlowLayout;
 
+    private Context context;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        context = inflater.getContext();
         return inflater.inflate(R.layout.fragment_event_test, container, false);
     }
 
@@ -34,10 +38,13 @@ public class SimpleFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         final LayoutInflater mInflater = LayoutInflater.from(getActivity());
         mFlowLayout = (TagFlowLayout) view.findViewById(R.id.id_flowlayout);
+
         mFlowLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "FlowLayout Clicked", Toast.LENGTH_SHORT).show();
+                int totalByLine = mFlowLayout.getTotalByLine(2);
+                int totalLines = mFlowLayout.getTotalLines();
+                Toast.makeText(context, "front two lines contains " + totalByLine + " items and total line is " + totalLines, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -49,7 +56,6 @@ public class SimpleFragment extends Fragment {
                 tv.setText(s);
                 return tv;
             }
-
         });
     }
 }
