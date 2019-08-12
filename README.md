@@ -24,6 +24,12 @@ Android流式布局，支持单选、多选、设置显示行数等，适合用�
 ## 用法
 
 ``` java
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+...
+
 dependencies {
     compile 'com.github.djzhao627:FlowLayout:1.0.1'
 }

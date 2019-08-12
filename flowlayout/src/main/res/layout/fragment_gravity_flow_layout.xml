@@ -21,8 +21,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Breath And Life"
             android:textColor="@drawable/text_color"
@@ -31,8 +31,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Fallen"
             android:textColor="@drawable/text_color"
@@ -41,8 +41,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Brand-new World"
             android:textColor="@drawable/text_color"
@@ -51,8 +51,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Save you from anything"
             android:textColor="@drawable/text_color"
@@ -76,8 +76,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Breath And Life"
             android:textColor="@drawable/text_color"
@@ -86,8 +86,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Fallen"
             android:textColor="@drawable/text_color"
@@ -96,8 +96,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Brand-new World"
             android:textColor="@drawable/text_color"
@@ -106,8 +106,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Save you from anything"
             android:textColor="@drawable/text_color"
@@ -132,8 +132,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Breath And Life"
             android:textColor="@drawable/text_color"
@@ -142,8 +142,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Fallen"
             android:textColor="@drawable/text_color"
@@ -152,8 +152,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Brand-new World"
             android:textColor="@drawable/text_color"
@@ -162,8 +162,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
             android:layout_marginRight="6dp"
+            android:layout_marginBottom="6dp"
             android:background="@drawable/normal_bg"
             android:text="Save you from anything"
             android:textColor="@drawable/text_color"
